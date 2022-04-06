@@ -1,0 +1,249 @@
+$primary:#F2CD5C;
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    font-family: 'vazir fd';
+}
+body{
+    width: 95vw;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0;
+}
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    nav{
+        background-color: #fff;
+        input[type=search]{
+            border-radius: 0.5em; 
+            & ~ button{
+                border-radius: 0.5em;
+            }
+        }
+    }
+}
+.index-title{
+    margin-top: 30px;
+    font-family: 'Sultan Adan';
+    font-size: 50px;
+    @media screen and (max-width:765px) {
+        text-align: center;
+        font-size: 30px;
+    }
+    .brand{
+        font-size: 72px;
+        @media screen and (max-width:765px) {
+            font-size: 40px;
+        }
+    }
+}
+.banner-image{
+    @media screen and (max-width:576px) {
+        display: none;
+    }
+    width: 100%;
+    border-radius: 1em;
+    margin-top: 3em;
+}
+.primary{
+    color: $primary;
+}
+.btn-primary{
+    background-color: $primary;
+    border: none;
+    border-radius:1em;
+}
+
+.separator-section{
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 2px;
+    background-color: rgba($color: #000000, $alpha: .2);
+    align-items: center;
+    border-radius: 0.5em;
+    span{
+        background-color: #fff;
+        padding: 0.5em 1em;
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+.last-news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid rgba($color: #000000, $alpha: .2);
+    padding-left: 1em;
+}
+
+.news{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid black;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    align-items: center;
+    @media screen and (max-width:576px) {
+        flex-direction: column;
+    }
+    img{
+        max-width: 130px;
+        max-height: 130px;
+        border-radius: 0.5em;
+        width: 100%;
+        @media screen and (max-width:576px) {
+            display:none;
+        }
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        font-size: 0.8em;
+        margin-right: 1em;
+        .top{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            small{
+                opacity: 0.7;
+            }
+        }
+        .middle{
+            @media screen and (max-width:576px) {
+                margin: 1em 0;
+            }
+        }
+        .bottom{
+            @media screen and (max-width:576px) {
+                width: 100%;
+            }
+            margin-right: auto;
+            .btn{
+                @media screen and (max-width:576px) {
+                    font-size: 12px;
+                    width: 100%;
+                }
+                border-radius: 0.5em;
+            }
+        }
+    }
+}
+.tourism{
+    @media screen and (max-width:576px) {
+        margin-top: 2.5em;
+    }
+}
+.tourism-places{
+    display: flex;
+    flex-direction: column;
+}
+
+.place{
+    width: 100%;
+    position: relative;
+    margin-bottom: 1em;
+
+    &::after{
+        content: "";
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0));
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        border-radius: 1em;
+    }
+    img{
+        width: 100%;
+        max-height: 300px;
+        border-radius: 1em;
+    }
+    div.bottom{
+        width: 100%;
+        color: #fff;
+        position: absolute;
+        bottom: 2em;
+        @media screen and (max-width:576px) {
+            bottom: 1em;
+        }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 2;
+        div.content{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            right: 2em;
+            bottom: 0;
+            strong{
+                font-size: 1.5em;
+                @media screen and (max-width:576px) {
+                    font-size: 1em;
+                }
+            }
+            small{
+                @media screen and (max-width:576px) {
+                    font-size: 0.7em;
+                }
+            }
+        }
+        .btn{
+            position: absolute;
+            width: 140px;
+            left: 2em;
+            bottom: 0;
+            @media screen and (max-width:576px) {
+                width: 100px;
+                font-size: 0.7em;
+            }
+        }
+    }
+}
+
+.social-networks{
+    margin-left: auto;
+}
+
+.about-city{
+    .content{
+        @media screen and (max-width:576px) {
+            font-size: 12px;
+        }
+    }
+    img{
+        max-width: 100%;
+        border-radius: 1em;
+        margin:1em 0;
+    }
+}
+
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    .bottom-footer{
+        text-align: center;
+        padding: 1em 4em;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width:576px) {
+            padding: 1em;
+            flex-direction: column;
+            i{
+                margin: 1em 0;
+            }
+        }
+    }
+    .social-networks{
+        svg{
+            width: 22px;
+        }
+    }
+}
